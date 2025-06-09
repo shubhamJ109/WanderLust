@@ -13,9 +13,13 @@ main().then(()=>{
 
 const initB = async()=>{
     await Listing.deleteMany({}); // clear previous data form databse wanderlust 
+    indata.data = indata.data.map((obj)=>({
+    ...obj,
+    owner:"683eeada6840524dc24e2e66"
+    }));
     await Listing.insertMany(indata.data);
     console.log("data was Initilized ");
     
-}
+};
 
 initB();

@@ -9,13 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="/css/rating.css" rel="stylesheet">
    
     <title>WanderLust</title>
 </head>
 <body>
     <%- include("../includes/navbar.ejs") %>
     <div class="container">
-        <%- body %></div>
+        <%- include("../includes/flash.ejs")%> <%- body %>
+    </div>
 
     <% // importing footer%>
     <%- include("../includes/footer.ejs") %>   

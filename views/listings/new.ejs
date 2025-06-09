@@ -2,11 +2,10 @@
 
     <body>
         <div class="row">
-
             <div class="col-8 offset-2">
                 <br><br>
                 <h3>Create A New Listing</h3>
-                <form method="post" action="/listings" novalidate class="needs-validation">
+                <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
                     <div class="mb-3 ">
                         <lable for="title" class="form-label">Title</lable>
                         <input name="listing[title]" placeholder="Enter Catchy Title" type="text" class="form-control" required>
@@ -19,9 +18,10 @@
                             class="form-control" required></textarea>
                             <div class="invalid-feedback">Please Enter Description</div>
                     </div>
+              
                     <div class="mb-3 ">
-                        <lable for="image" class="form-label">Image</lable>
-                        <input name="listing[image]" placeholder="Url/Link" type="text" type="text"
+                        <lable for="image" class="form-label"> Upload listing Image</lable>
+                        <input name="listing[image]" type="file" type="text"
                             class="form-control">
                     </div>
 
